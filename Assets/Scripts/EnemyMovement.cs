@@ -13,6 +13,8 @@ public class EnemyMovement : MonoBehaviour
 
     private Vector3 targetTower;
 
+    public static List<Transform> TargetList;
+
     void Start()
     {
         leftTower = GameObject.Find("LeftTower");
@@ -37,6 +39,11 @@ public class EnemyMovement : MonoBehaviour
         if (gameObject.transform.position.x > 0)
         {
             targetTower = rightTower.transform.position;
+        }
+
+        if (targetTower == null)
+        {
+            targetTower = midTower.transform.position;
         }
     }
 

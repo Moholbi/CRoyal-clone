@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6301758035200535556}
   m_Layer: 0
   m_Name: EnemyGiant
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,9 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70386c6d82a1eb4090906eca9341722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftTower: {fileID: 2220475320161444378, guid: f7f0e5b901ea0ad4f98d35064222afab, type: 3}
-  _midTower: {fileID: 335943348938481827, guid: 12181fcf9912c8c42b4bb87b30ddc80f, type: 3}
-  _rightTower: {fileID: 1885872252881884059, guid: 4cf4312ba0109824989a81e6e5827720, type: 3}
   myNavMeshAgent: {fileID: 6301758035200535556}
 --- !u!195 &6301758035200535556
 NavMeshAgent:
