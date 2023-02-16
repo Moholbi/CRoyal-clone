@@ -15,7 +15,9 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     [SerializeField] UseSkill summonKnight;
     [SerializeField] UseSkill summonMeteor;
-    [SerializeField] UseSkill summonGiant;
+    [SerializeField] UseSkill summonBird;
+
+    [SerializeField] ManaBar manaBar;
 
     public Vector3 pointerLocation;
 
@@ -50,24 +52,36 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, _layerMask))
         {
             pointerLocation = raycastHit.point;
-            Debug.Log(pointerLocation);
+            //Debug.Log(pointerLocation);
 
             if (this.gameObject.name == "SkillKnight")
             {
-                summonKnight.SummonKnight();
-                this.gameObject.transform.position = new Vector3(300, 50, 0);
+                this.gameObject.transform.position = new Vector3(300, 65, 0);
+
+                if (manaBar.currentMana >= 2)
+                {
+                    summonKnight.SummonKnight();
+                }
             }
 
             if (this.gameObject.name == "SkillMeteor")
             {
-                summonMeteor.SummonMeteor();
-                this.gameObject.transform.position = new Vector3(400, 50, 0);
+                this.gameObject.transform.position = new Vector3(400, 65, 0);
+
+                if (manaBar.currentMana >= 5)
+                {
+                    summonMeteor.SummonMeteor();
+                }
             }
 
-            if (this.gameObject.name == "SkillGiant")
+            if (this.gameObject.name == "SkillBird")
             {
-                summonGiant.SummonGiant();
-                this.gameObject.transform.position = new Vector3(500, 50, 0);
+                this.gameObject.transform.position = new Vector3(500, 65, 0);
+
+                if (manaBar.currentMana >= 3)
+                {
+                    summonBird.SummonBird();
+                }
             }
         }
     }

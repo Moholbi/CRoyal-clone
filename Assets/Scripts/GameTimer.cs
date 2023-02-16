@@ -6,10 +6,9 @@ using TMPro;
 public class GameTimer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timerUI;
-    [SerializeField] float gameTimer = 60f;
-    [SerializeField] GameManager gameManager;
+    [SerializeField] public float gameTimer = 60f;
 
-    bool timeUp = true;
+    //bool timeUp = true;
 
     void Update()
     {
@@ -22,7 +21,7 @@ public class GameTimer : MonoBehaviour
         timerUI.text = "Timer:" + gameTimer.ToString("0");
         if (gameTimer <= 0)
         {
-            timeUp = true;
+            //timeUp = true;
             timerUI.text = ("Time Up");
             Time.timeScale = 0;
         }
