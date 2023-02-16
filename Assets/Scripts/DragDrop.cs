@@ -58,17 +58,17 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             {
                 this.gameObject.transform.position = new Vector3(300, 65, 0);
 
-                if (manaBar.currentMana >= 2)
+                if (manaBar.currentMana >= 1)
                 {
                     summonKnight.SummonKnight();
                 }
             }
 
-            if (this.gameObject.name == "SkillMeteor")
+            if (this.gameObject.name == "SkillArcher")
             {
                 this.gameObject.transform.position = new Vector3(400, 65, 0);
 
-                if (manaBar.currentMana >= 5)
+                if (manaBar.currentMana >= 3)
                 {
                     summonMeteor.SummonMeteor();
                 }
@@ -78,7 +78,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             {
                 this.gameObject.transform.position = new Vector3(500, 65, 0);
 
-                if (manaBar.currentMana >= 3)
+                if (manaBar.currentMana >= 2)
                 {
                     summonBird.SummonBird();
                 }

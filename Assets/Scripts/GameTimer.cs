@@ -8,8 +8,6 @@ public class GameTimer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerUI;
     [SerializeField] public float gameTimer = 60f;
 
-    //bool timeUp = true;
-
     void Update()
     {
         SetTimerText();
@@ -21,9 +19,7 @@ public class GameTimer : MonoBehaviour
         timerUI.text = "Timer:" + gameTimer.ToString("0");
         if (gameTimer <= 0)
         {
-            //timeUp = true;
             timerUI.text = ("Time Up");
-            Time.timeScale = 0;
         }
     }
 }

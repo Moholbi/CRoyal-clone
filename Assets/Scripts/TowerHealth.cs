@@ -4,19 +4,35 @@ using UnityEngine;
 
 public class TowerHealth : MonoBehaviour
 {
-    [SerializeField] float towerHealth;
+    [SerializeField] public float unitHealth;
+    [SerializeField] float arrowDamage;
+    [SerializeField] MainTower mainTower;
 
-    void OnCollisionStay(Collision other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
         {
-            towerHealth -= 1 * Time.deltaTime;
+            unitHealth -= 1 * Time.deltaTime;
             Debug.Log("collided");
 
-            if (towerHealth <= 0)
+            if (unitHealth <= 0)
             {
                 Destroy(gameObject);
             }
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyArrow")
+        {
+            unitHealth -= arrowDamage;
+        }
+
+        if (unitHealth <= 0f)
+        {
+            mainTower.sideAlive--;
+            Destroy(gameObject, 0.1f);
         }
     }
 }

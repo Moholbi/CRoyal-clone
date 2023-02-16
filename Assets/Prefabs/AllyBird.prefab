@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 7930045506525757586}
   - component: {fileID: 2582199052355880117}
   - component: {fileID: 6988849797114777409}
-  - component: {fileID: 2883160396697921702}
   - component: {fileID: -6179219671929147454}
-  - component: {fileID: -8981535866435988029}
   - component: {fileID: 3262860554527261603}
-  m_Layer: 0
+  - component: {fileID: 5237137413655237861}
+  m_Layer: 9
   m_Name: AllyBird
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -101,18 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2883160396697921702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5205111601943819015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb4c2dba0d58b0428c186f710c310a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!195 &-6179219671929147454
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -135,22 +122,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-8981535866435988029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5205111601943819015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3be156b81b455e64caf492b95200321e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myNavMeshAgent: {fileID: -6179219671929147454}
-  allEnemies: []
-  neraestEnemy: {fileID: 0}
-  unitHealth: 10
 --- !u!54 &3262860554527261603
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -167,3 +138,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &5237137413655237861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5205111601943819015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc17207781f216c42a53c3b2e9bba49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNavMeshAgent: {fileID: -6179219671929147454}
+  allEnemies: []
+  neraestEnemy: {fileID: 0}
+  arrowPrefab: {fileID: 3630537202254959282, guid: f8fef8a795a38a0499f90cb03672326f, type: 3}
+  distanceToShoot: 5
+  unitHealth: 100
+  arrowDamage: 50

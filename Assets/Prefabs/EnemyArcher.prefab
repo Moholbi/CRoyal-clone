@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1566178105244197600}
   - component: {fileID: 4160691700972428829}
   - component: {fileID: 2522954181273171838}
-  - component: {fileID: -670200615949842832}
   - component: {fileID: 2082193565498362856}
-  m_Layer: 0
+  - component: {fileID: 8129044060548212651}
+  m_Layer: 10
   m_Name: EnemyArcher
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -122,22 +122,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-670200615949842832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6698199086902492294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7c8e9491bcbb0d4cb80b4c55acca798, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myNavMeshAgent: {fileID: 2522954181273171838}
-  allPlayers: []
-  neraestEnemy: {fileID: 0}
-  unitHealth: 10
 --- !u!54 &2082193565498362856
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -154,3 +138,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &8129044060548212651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698199086902492294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645d7bc462f139048b74a9c385694efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNavMeshAgent: {fileID: 2522954181273171838}
+  allPlayers: []
+  nearestPlayer: {fileID: 0}
+  arrowPrefab: {fileID: 3630537202254959282, guid: 3b1235671fd521b498c75e4bd4e207e0, type: 3}
+  distanceToShoot: 10
+  unitHealth: 200
+  arrowDamage: 50

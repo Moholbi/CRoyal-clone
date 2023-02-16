@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - EnemyArrow
+  - PlayerArrow
   layers:
   - Default
   - TransparentFX
@@ -12,12 +14,12 @@ TagManager:
   - Ground
   - Water
   - UI
-  - PlayerTower
-  - 
-  - 
-  - 
-  - 
-  - 
+  - MainTower
+  - Arrow
+  - KnightDamage
+  - Aerial
+  - Grounded
+  - SideTower
   - 
   - 
   - 

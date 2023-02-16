@@ -11,6 +11,13 @@ public class EnemySpawner : MonoBehaviour
     int _minSpawnValue = 4;
     int _maxSpawnValue = 8;
 
+    public int currentWave;
+
+    void Start()
+    {
+        currentWave = 1;
+    }
+
     void Update()
     {
         Timer();
@@ -31,23 +38,23 @@ public class EnemySpawner : MonoBehaviour
     {
         if (gameTimer.gameTimer < 40f)
         {
-            _minSpawnValue = 3;
-            _maxSpawnValue = 7;
-            Debug.Log("< 40");
+            _minSpawnValue = 6;
+            _maxSpawnValue = 9;
+            currentWave = 2;
         }
 
         if (gameTimer.gameTimer < 30f)
         {
-            _minSpawnValue = 2;
-            _maxSpawnValue = 5;
-            Debug.Log("< 30");
+            _minSpawnValue = 3;
+            _maxSpawnValue = 6;
+            currentWave = 3;
         }
 
         if (gameTimer.gameTimer < 20f)
         {
             _minSpawnValue = 1;
             _maxSpawnValue = 3;
-            Debug.Log("< 20");
+            currentWave = 4;
         }
     }
 

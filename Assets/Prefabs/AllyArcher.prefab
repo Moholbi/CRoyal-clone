@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3442354580823882884}
   - component: {fileID: 6394330591609561324}
   - component: {fileID: 7138416748854494924}
-  - component: {fileID: -1541035851078973681}
   - component: {fileID: -5839780998185910409}
   - component: {fileID: 6434029736400213463}
-  m_Layer: 0
+  - component: {fileID: 8685693575886637393}
+  m_Layer: 10
   m_Name: AllyArcher
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -100,22 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1541035851078973681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041906569535864338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3be156b81b455e64caf492b95200321e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myNavMeshAgent: {fileID: -5839780998185910409}
-  allEnemies: []
-  neraestEnemy: {fileID: 0}
-  unitHealth: 10
 --- !u!195 &-5839780998185910409
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -154,3 +138,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &8685693575886637393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041906569535864338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351ed8313d695cf43b05b3c3c7ff4867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNavMeshAgent: {fileID: -5839780998185910409}
+  allEnemies: []
+  neraestEnemy: {fileID: 0}
+  arrowPrefab: {fileID: 3630537202254959282, guid: f8fef8a795a38a0499f90cb03672326f, type: 3}
+  distanceToShoot: 10
+  unitHealth: 200
+  arrowDamage: 50

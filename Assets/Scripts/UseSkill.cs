@@ -6,7 +6,7 @@ public class UseSkill : MonoBehaviour
 {
 
     [SerializeField] GameObject allyKnights;
-    [SerializeField] GameObject allyMeteor;
+    [SerializeField] GameObject allyArcher;
     [SerializeField] GameObject allyBird;
 
     [SerializeField] DragDrop pointerLocation;
@@ -16,18 +16,18 @@ public class UseSkill : MonoBehaviour
     public void SummonKnight()
     {
         Instantiate(allyKnights, pointerLocation.pointerLocation, Quaternion.identity);
-        manaBar.SpendMana(2);
+        manaBar.SpendMana(1);
     }
 
     public void SummonMeteor()
     {
-        Instantiate(allyMeteor, new Vector3(pointerLocation.pointerLocation.x, pointerLocation.pointerLocation.y + 10f, pointerLocation.pointerLocation.z), Quaternion.identity);
-        manaBar.SpendMana(5);
+        Instantiate(allyArcher, (pointerLocation.pointerLocation), Quaternion.identity);
+        manaBar.SpendMana(3);
     }
 
     public void SummonBird()
     {
         Instantiate(allyBird, pointerLocation.pointerLocation, Quaternion.identity);
-        manaBar.SpendMana(3);
+        manaBar.SpendMana(2);
     }
 }
