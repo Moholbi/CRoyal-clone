@@ -5,29 +5,71 @@ using UnityEngine;
 public class UseSkill : MonoBehaviour
 {
 
-    [SerializeField] GameObject allyKnights;
-    [SerializeField] GameObject allyArcher;
-    [SerializeField] GameObject allyBird;
+    public static List<Transform> BlueUnitList;
+    ObjectPooler objectPooler;
+    string[] blueUnitTypes = { "BlueKnight", "BlueMage", "BlueBird", "BluePriest" };
+    private string _selectedUnit;
 
     [SerializeField] DragDrop pointerLocation;
-
     [SerializeField] ManaBar manaBar;
 
-    public void SummonKnight()
+    void Start()
     {
-        Instantiate(allyKnights, pointerLocation.pointerLocation, Quaternion.identity);
+        objectPooler = ObjectPooler.Instance;
+    }
+
+    public void SpawnBlueUnit()
+    {
+        if (DragDrop.skillIndex == 0)
+        {
+            SpawnKnight();
+        }
+
+        if (DragDrop.skillIndex == 1)
+        {
+            SpawnMage();
+        }
+
+        if (DragDrop.skillIndex == 2)
+        {
+            SpawnBird();
+        }
+
+        if (DragDrop.skillIndex == 3)
+        {
+            SpawnPriest();
+        }
+    }
+
+    void SpawnKnight()
+    {
+        _selectedUnit = "BlueKnight";
+        Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
+        AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
         manaBar.SpendMana(1);
     }
 
-    public void SummonMeteor()
+    void SpawnMage()
     {
-        Instantiate(allyArcher, (pointerLocation.pointerLocation), Quaternion.identity);
+        _selectedUnit = "BlueMage";
+        Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
+        AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
+        manaBar.SpendMana(2);
+    }
+
+    void SpawnBird()
+    {
+        _selectedUnit = "BlueBird";
+        Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
+        AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
         manaBar.SpendMana(3);
     }
 
-    public void SummonBird()
+    void SpawnPriest()
     {
-        Instantiate(allyBird, pointerLocation.pointerLocation, Quaternion.identity);
-        manaBar.SpendMana(2);
+        _selectedUnit = "BluePriest";
+        Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
+        AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
+        manaBar.SpendMana(3);
     }
 }

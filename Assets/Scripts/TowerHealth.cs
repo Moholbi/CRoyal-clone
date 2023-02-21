@@ -2,37 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerHealth : MonoBehaviour
+public class TowerHealth : Damagable
 {
+    List<Damagable> FactionList;
+
+    [SerializeField] private float _maxHealth;
     [SerializeField] public float unitHealth;
-    [SerializeField] float arrowDamage;
-    [SerializeField] MainTower mainTower;
+    [SerializeField] private HealthBar _healthBar;
+    [SerializeField] bool isBlue;
+    [SerializeField] CastleBehaviour castleBehaviour;
 
-    void OnTriggerStay(Collider other)
+    void Start()
     {
-        if (other.gameObject.tag == "Enemy")
-        {
-            unitHealth -= 1 * Time.deltaTime;
-            Debug.Log("collided");
+        _healthBar.UpdateHealthBar(_maxHealth, unitHealth);
+        Faction();
+    }
 
-            if (unitHealth <= 0)
-            {
-                Destroy(gameObject);
-            }
+    void Faction()
+    {
+        if (gameObject.CompareTag("Blue"))
+        {
+            AliveUnitHolder.BlueUnitList.Add(this);
+        }
+
+        if (gameObject.CompareTag("Red"))
+        {
+            AliveUnitHolder.RedUnitList.Add(this);
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    public override void GotHit(int damage)
     {
-        if (other.gameObject.tag == "EnemyArrow")
+        unitHealth -= damage;
+        _healthBar.UpdateHealthBar(_maxHealth, unitHealth);
+        if (unitHealth <= 0)
         {
-            unitHealth -= arrowDamage;
+            Death();
+        }
+    }
+
+    void Death()
+    {
+        if (isBlue)
+        {
+            FactionList = AliveUnitHolder.BlueUnitList;
+            castleBehaviour.blueIsTargetable += 1;
         }
 
-        if (unitHealth <= 0f)
+        if (!isBlue)
         {
-            mainTower.sideAlive--;
-            Destroy(gameObject, 0.1f);
+            FactionList = AliveUnitHolder.RedUnitList;
+            castleBehaviour.redIsTargetable += 1;
         }
+
+        FactionList.Remove(this);
+        this.gameObject.SetActive(false);
+        castleBehaviour.AddCastle();
     }
 }

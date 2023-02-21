@@ -6,7 +6,7 @@ using TMPro;
 public class WaveCounter : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI waveCounterUI;
-    [SerializeField] EnemySpawner enemySpawner;
+    [SerializeField] Spawner enemySpawner;
     [SerializeField] public float waveCounter = 0f;
 
     void Update()

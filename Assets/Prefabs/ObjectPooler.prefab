@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8053196087295927501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8053196087295927503}
+  - component: {fileID: 8053196087295927502}
+  m_Layer: 0
+  m_Name: ObjectPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8053196087295927503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053196087295927501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.2511005, y: -11.415703, z: 42.748882}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8053196087295927502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8053196087295927501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610a5a6e62a24a240a9f8a5875131613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: BlueCube
+    prefab: {fileID: 1680388578482204252, guid: 3d278750bb1dff742af5efea290261f0, type: 3}
+    size: 10
+  - tag: BlueCapsule
+    prefab: {fileID: 7456696945493395406, guid: 15ddc19ffc2caa1469e7278efeb35ad6, type: 3}
+    size: 10
+  - tag: BlueSphere
+    prefab: {fileID: 3212852992615310193, guid: 46c88033823b2994ba3f7fa888c7cfde, type: 3}
+    size: 10
+  - tag: BlueArrow
+    prefab: {fileID: 3212852992615310193, guid: 46c88033823b2994ba3f7fa888c7cfde, type: 3}
+    size: 10
+  - tag: RedCube
+    prefab: {fileID: 3212852992615310193, guid: 46c88033823b2994ba3f7fa888c7cfde, type: 3}
+    size: 10
+  - tag: RedCapsule
+    prefab: {fileID: 3212852992615310193, guid: 46c88033823b2994ba3f7fa888c7cfde, type: 3}
+    size: 10
+  - tag: RedSphere
+    prefab: {fileID: 3212852992615310193, guid: 46c88033823b2994ba3f7fa888c7cfde, type: 3}
+    size: 10
+  - tag: RedArrow
+    prefab: {fileID: 3212852992615310193, guid: 46c88033823b2994ba3f7fa888c7cfde, type: 3}
+    size: 10

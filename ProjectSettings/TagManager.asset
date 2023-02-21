@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - EnemyArrow
   - PlayerArrow
+  - Blue
+  - Red
   layers:
   - Default
   - TransparentFX
@@ -14,12 +16,12 @@ TagManager:
   - Ground
   - Water
   - UI
-  - MainTower
-  - Arrow
-  - KnightDamage
+  - Tower
+  - Support
+  - Melee
   - Aerial
-  - Grounded
-  - SideTower
+  - 
+  - 
   - 
   - 
   - 
