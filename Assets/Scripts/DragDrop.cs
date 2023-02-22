@@ -11,12 +11,9 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     [ShowInInspector] private Vector2 _startPos;
 
     [SerializeField] private Canvas _canvas;
-
     [SerializeField] Camera _cam;
     [SerializeField] LayerMask _layerMask;
-
     [SerializeField] UseSkill summonBlueUnit;
-
     [SerializeField] ManaBar manaBar;
 
     public Vector3 pointerLocation;

@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -341}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &147565062
@@ -485,6 +485,14 @@ PrefabInstance:
     - target: {fileID: 3367673348665711719, guid: 6ad4c9c07e2986942a52988b53928575, type: 3}
       propertyPath: m_Name
       value: BlueCastle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944578276470866490, guid: 6ad4c9c07e2986942a52988b53928575, type: 3}
+      propertyPath: _maxHealth
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944578276470866490, guid: 6ad4c9c07e2986942a52988b53928575, type: 3}
+      propertyPath: unitHealth
+      value: 1500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ad4c9c07e2986942a52988b53928575, type: 3}
@@ -1342,7 +1350,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 33
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1738,6 +1746,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 945076847}
     m_Modifications:
+    - target: {fileID: -5300954179133785772, guid: b8c9eb1511102a044a3b01b8a3e0d1da, type: 3}
+      propertyPath: _maxHealth
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: -5300954179133785772, guid: b8c9eb1511102a044a3b01b8a3e0d1da, type: 3}
+      propertyPath: unitHealth
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 7245015117238834859, guid: b8c9eb1511102a044a3b01b8a3e0d1da, type: 3}
       propertyPath: m_Name
       value: RedCastle
@@ -2364,7 +2380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 100}
+  m_AnchoredPosition: {x: 0, y: 266}
   m_SizeDelta: {x: -400, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1654667767
@@ -3007,7 +3023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 3}
+  m_AnchoredPosition: {x: 0, y: 169}
   m_SizeDelta: {x: 250, y: 25}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2009304640
@@ -3460,6 +3476,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 945076847}
     m_Modifications:
     - target: {fileID: -8298844651947090078, guid: 6a499ac8fcc0b8944bebce64f0c371f3, type: 3}
+      propertyPath: _maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: -8298844651947090078, guid: 6a499ac8fcc0b8944bebce64f0c371f3, type: 3}
+      propertyPath: unitHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: -8298844651947090078, guid: 6a499ac8fcc0b8944bebce64f0c371f3, type: 3}
       propertyPath: castleBehaviour
       value: 
       objectReference: {fileID: 1033621976}
@@ -3574,6 +3598,14 @@ PrefabInstance:
       value: BlueLeftTower
       objectReference: {fileID: 0}
     - target: {fileID: 1778745866876347121, guid: cd6631e138a40194f9c29294580b0e74, type: 3}
+      propertyPath: _maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778745866876347121, guid: cd6631e138a40194f9c29294580b0e74, type: 3}
+      propertyPath: unitHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778745866876347121, guid: cd6631e138a40194f9c29294580b0e74, type: 3}
       propertyPath: castleBehaviour
       value: 
       objectReference: {fileID: 899910191}
@@ -3594,6 +3626,14 @@ PrefabInstance:
     - target: {fileID: 3905279322624219857, guid: 6de3577ea8b27aa43aafa03a506bccaa, type: 3}
       propertyPath: m_Name
       value: BlueRightTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905778234258973652, guid: 6de3577ea8b27aa43aafa03a506bccaa, type: 3}
+      propertyPath: _maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905778234258973652, guid: 6de3577ea8b27aa43aafa03a506bccaa, type: 3}
+      propertyPath: unitHealth
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3905778234258973652, guid: 6de3577ea8b27aa43aafa03a506bccaa, type: 3}
       propertyPath: castleBehaviour
@@ -3657,6 +3697,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 945076847}
     m_Modifications:
+    - target: {fileID: -607479040941836464, guid: a93d04401f3df7f4d8a75a8d8d7bca52, type: 3}
+      propertyPath: _maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: -607479040941836464, guid: a93d04401f3df7f4d8a75a8d8d7bca52, type: 3}
+      propertyPath: unitHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: -607479040941836464, guid: a93d04401f3df7f4d8a75a8d8d7bca52, type: 3}
       propertyPath: castleBehaviour
       value: 
