@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using Sirenix.OdinInspector;
+using Photon.Bolt;
 
 public class FighterUnit : Damagable
 {
@@ -23,6 +23,16 @@ public class FighterUnit : Damagable
     void Start()
     {
         TypeDecider();
+
+        if (gameObject.tag == "Blue")
+        {
+            AliveUnitHolder.BlueUnitList.Add(this);
+        }
+
+        if (gameObject.tag == "Red")
+        {
+            AliveUnitHolder.RedUnitList.Add(this);
+        }
 
         _maxHealth = statList.MaxHealth;
         unitHealth = statList.MaxHealth;
@@ -154,7 +164,6 @@ public class FighterUnit : Damagable
         }
 
         TargetList.Remove(this);
-        this.gameObject.SetActive(false);
-        unitHealth = 300f;
+        BoltNetwork.Destroy(gameObject);
     }
 }

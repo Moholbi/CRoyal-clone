@@ -1737,6 +1737,7 @@ GameObject:
   - component: {fileID: 7896918129210111446}
   - component: {fileID: 4614853967595305473}
   - component: {fileID: 934392530318964684}
+  - component: {fileID: -8807561597003358386}
   m_Layer: 10
   m_Name: BlueKnight
   m_TagString: Blue
@@ -1836,6 +1837,35 @@ MonoBehaviour:
   fighterAnimator: {fileID: 6675555563740535975}
   _healthBar: {fileID: 80775857313224596}
   unitHealth: 0
+--- !u!114 &-8807561597003358386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6675555563749928731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 155943207, guid: 5b00bf8b25851d440940a40ec23344f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneGuid: 
+  _serializerGuid: bdb8d1d2-1026-4154-9b41-753da9f96653
+  _prefabId: 2
+  _updateRate: 1
+  _autoFreezeProxyFrames: 0
+  _clientPredicted: 1
+  _allowInstantiateOnClient: 1
+  _persistThroughSceneLoads: 0
+  _sceneObjectDestroyOnDetach: 1
+  _sceneObjectAutoAttach: 1
+  _alwaysProxy: 0
+  _detachOnDisable: 1
+  _allowFirstReplicationWhenFrozen: 0
+  _autoRemoveChildEntities: 0
+  _entityBehaviourQueryOption: 0
+  _entityPriorityCalculatorQueryOption: 1
+  _entityReplicationFilterQueryOption: 1
 --- !u!1 &6739593988778712382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,7 +2741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8006035249074272872, guid: b7d171b0eb774114c86d414ea4c31d85, type: 3}
       propertyPath: m_BlockingMask.m_Bits
-      value: 4095
+      value: 1023
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d171b0eb774114c86d414ea4c31d85, type: 3}

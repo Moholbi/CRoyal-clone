@@ -9,6 +9,8 @@ TagManager:
   - PlayerArrow
   - Blue
   - Red
+  - RedCamera
+  - BlueCamera
   layers:
   - Default
   - TransparentFX

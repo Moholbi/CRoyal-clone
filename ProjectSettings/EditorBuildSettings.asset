@@ -17,4 +17,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YouWin.unity
     guid: a98f6e7ebecb5bd4eb4572be5f00d835
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: d6d80c2b974e5e94bbab30c37f84149d, type: 2}

@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 2528304893429685685}
   - component: {fileID: 2528304893429685672}
   - component: {fileID: 8001473802124619697}
+  - component: {fileID: 3052051180164827751}
   m_Layer: 10
   m_Name: RedMage
   m_TagString: Red
@@ -495,6 +496,35 @@ MonoBehaviour:
   fighterAnimator: {fileID: 2468545851533941322}
   _healthBar: {fileID: 5804382516336292547}
   unitHealth: 0
+--- !u!114 &3052051180164827751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2526703673118836804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 155943207, guid: 5b00bf8b25851d440940a40ec23344f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneGuid: 
+  _serializerGuid: bdb8d1d2-1026-4154-9b41-753da9f96653
+  _prefabId: 7
+  _updateRate: 1
+  _autoFreezeProxyFrames: 0
+  _clientPredicted: 1
+  _allowInstantiateOnClient: 1
+  _persistThroughSceneLoads: 0
+  _sceneObjectDestroyOnDetach: 1
+  _sceneObjectAutoAttach: 1
+  _alwaysProxy: 0
+  _detachOnDisable: 1
+  _allowFirstReplicationWhenFrozen: 0
+  _autoRemoveChildEntities: 0
+  _entityBehaviourQueryOption: 0
+  _entityPriorityCalculatorQueryOption: 1
+  _entityReplicationFilterQueryOption: 1
 --- !u!1 &2526709619955821388
 GameObject:
   m_ObjectHideFlags: 0

@@ -961,6 +961,7 @@ GameObject:
   - component: {fileID: 3565105161981385015}
   - component: {fileID: 3565105161981385011}
   - component: {fileID: -5945659411951045626}
+  - component: {fileID: 4099292630403525802}
   m_Layer: 7
   m_Name: BluePriest
   m_TagString: Blue
@@ -1059,6 +1060,35 @@ MonoBehaviour:
   fighterAnimator: {fileID: 3470845426908991697}
   _healthBar: {fileID: 4733017452856027559}
   unitHealth: 0
+--- !u!114 &4099292630403525802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3566509804767736707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 155943207, guid: 5b00bf8b25851d440940a40ec23344f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneGuid: 
+  _serializerGuid: bdb8d1d2-1026-4154-9b41-753da9f96653
+  _prefabId: 4
+  _updateRate: 1
+  _autoFreezeProxyFrames: 0
+  _clientPredicted: 1
+  _allowInstantiateOnClient: 1
+  _persistThroughSceneLoads: 0
+  _sceneObjectDestroyOnDetach: 1
+  _sceneObjectAutoAttach: 1
+  _alwaysProxy: 0
+  _detachOnDisable: 1
+  _allowFirstReplicationWhenFrozen: 0
+  _autoRemoveChildEntities: 0
+  _entityBehaviourQueryOption: 0
+  _entityPriorityCalculatorQueryOption: 1
+  _entityReplicationFilterQueryOption: 1
 --- !u!1 &3566575917673330909
 GameObject:
   m_ObjectHideFlags: 0

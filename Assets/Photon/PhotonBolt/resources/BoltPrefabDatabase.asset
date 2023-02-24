@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1148507213, guid: 5b00bf8b25851d440940a40ec23344f4, type: 3}
+  m_Name: BoltPrefabDatabase
+  m_EditorClassIdentifier: 
+  DatabaseMode: 0
+  Prefabs:
+  - {fileID: 0}
+  - {fileID: 7235284654645127756, guid: 2b9b2e52d04f3034fa67420e412482de, type: 3}
+  - {fileID: 6675555563749928731, guid: e6de65a32eb0d464ead69ab45e0a79f0, type: 3}
+  - {fileID: 5951773499452822910, guid: 1b138c2e5751327489d47b042693f948, type: 3}
+  - {fileID: 3566509804767736707, guid: ae5cf572c4995ed4fad8fd5b49783720, type: 3}
+  - {fileID: 1283729250370794230, guid: 3da96a65fe1b61844be444a39eab3ad3, type: 3}
+  - {fileID: 1761462511311163716, guid: 5d0ca52048fd6d344918d8570a563bfd, type: 3}
+  - {fileID: 2526703673118836804, guid: cd32d29a4f88a6b479a14e97ec7f41e2, type: 3}
+  - {fileID: 7076412598775365697, guid: f9b6f00417642584cbaee8f6de03a299, type: 3}
+  - {fileID: 100000, guid: 9e4c13062a8548e438c26a67020d9895, type: 3}
+  - {fileID: 100000, guid: e6dd368eb36c92b429be2244b9da818a, type: 3}
+  - {fileID: 1335787916281456, guid: 0687f1a3f1bee4e59af7d19d1451661b, type: 3}
+  - {fileID: 1706063248089286, guid: b57faef6db4664e0493241e9e0fbdd9a, type: 3}
+  - {fileID: 1613854665616328, guid: 79b73655e226e45c88b90fd215605ca6, type: 3}
+  - {fileID: 100094, guid: dff296f12d6973b44a2d6c383e217f76, type: 3}
+  - {fileID: 1760237739261228, guid: 0e5aba4979e444340b5ba527b266572e, type: 3}
+  - {fileID: 1501915568614306, guid: 879dca49eec36428592dea9f860775b4, type: 3}
+  - {fileID: 1650260434099678, guid: 330119694405d4ee0ac05cd929fbdaaf, type: 3}
+  - {fileID: 1061991992422582, guid: eeb49bd7c50234ac69db6575e1ba39c3, type: 3}
+  - {fileID: 1116248558619672, guid: 195ea7f418fb44dbf8fc74e1e1ccfb06, type: 3}
+  - {fileID: 1876292062879048, guid: ee03d5d7dd331489b878c459b9b588e2, type: 3}
+  - {fileID: 1093895774965776, guid: 5f4ce519e6b1b45acbf4f4a2d461943d, type: 3}
+  - {fileID: 1093895774965776, guid: 22d1a7e17827244bba7e0af01b910db6, type: 3}
+  - {fileID: 100000, guid: 6fa4400788352f44199064562f34048d, type: 3}
+  - {fileID: 100000, guid: b5907a8b9fa4ef549b9dd4f8a9e863eb, type: 3}
+  SearchPaths: []

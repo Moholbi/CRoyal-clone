@@ -254,7 +254,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4095
+    m_Bits: 1023
 --- !u!114 &8130899525840405199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,3 +268,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthBarSprite: {fileID: 8989312501772068260}
+  blueCamera: {fileID: 4911760173491142352, guid: aa9d69a1a2c60e54ab67a81aa97c6795, type: 3}
+  redCamera: {fileID: 6110038366287722203, guid: 2f2b59b2bec0901408d96cf71e22f5b7, type: 3}

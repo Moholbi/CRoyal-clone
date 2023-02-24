@@ -58,7 +58,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 if (manaBar.currentMana >= 1)
                 {
                     skillIndex = 0;
-                    summonBlueUnit.SpawnBlueUnit();
+                    summonBlueUnit.SpawnUnit();
                 }
             }
 
@@ -67,7 +67,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 if (manaBar.currentMana >= 3)
                 {
                     skillIndex = 1;
-                    summonBlueUnit.SpawnBlueUnit();
+                    summonBlueUnit.SpawnUnit();
                 }
             }
 
@@ -76,7 +76,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 if (manaBar.currentMana >= 2)
                 {
                     skillIndex = 2;
-                    summonBlueUnit.SpawnBlueUnit();
+                    summonBlueUnit.SpawnUnit();
                 }
             }
 
@@ -85,7 +85,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
                 if (manaBar.currentMana >= 2)
                 {
                     skillIndex = 3;
-                    summonBlueUnit.SpawnBlueUnit();
+                    summonBlueUnit.SpawnUnit();
                 }
             }
         }

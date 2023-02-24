@@ -63,9 +63,8 @@ public class Spawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        //int targetIndex = Random.Range(0, enemyTypes.Length);
+        int targetIndex = Random.Range(0, enemyTypes.Length);
         int randomSpawnRange = Random.Range(_minSpawnValue, _maxSpawnValue);
-        int targetIndex = 1;
 
         _spawnTimer = randomSpawnRange;
 

@@ -11,14 +11,24 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (blueCastleHealth.unitHealth <= 0)
+        if (blueCastleHealth.unitHealth <= 0 && StartMenu.cameraChoice == 2)
         {
             SceneManager.LoadScene(2);
         }
 
-        if (redCastleHealth.unitHealth <= 0)
+        if (redCastleHealth.unitHealth <= 0 && StartMenu.cameraChoice == 2)
         {
             SceneManager.LoadScene(3);
+        }
+
+        if (blueCastleHealth.unitHealth <= 0 && StartMenu.cameraChoice == 3)
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        if (redCastleHealth.unitHealth <= 0 && StartMenu.cameraChoice == 3)
+        {
+            SceneManager.LoadScene(2);
         }
 
         if (gameTimer.gameTimer <= 0)

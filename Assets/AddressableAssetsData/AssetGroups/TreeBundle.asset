@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: TreeBundle
+  m_EditorClassIdentifier: 
+  m_GroupName: TreeBundle
+  m_Data:
+    m_SerializedData: []
+  m_GUID: e44524907eeed2047bfc0181d13be9cb
+  m_SerializeEntries:
+  - m_GUID: c11c3aa50e153124ebce5d05a598159f
+    m_Address: Tree1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cce6e2e8d0946e24ca7ce0b199dc09ca
+    m_Address: Tree2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eaecceffc4d44524098ec2b299ea2b8c
+    m_Address: Tree3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e150e8680dcf9784a89843e55668ad0e
+    m_Address: Tree4
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 49a781f3197d9704196fdf9000f678c4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 28b316970460dcd408184ea0689fdc89, type: 2}
+    - {fileID: 11400000, guid: c09f920e2d0607f449bcc69471a34449, type: 2}
