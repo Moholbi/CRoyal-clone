@@ -1099,6 +1099,8 @@ MonoBehaviour:
   fighterAnimator: {fileID: 6039316345322228310}
   _healthBar: {fileID: 195013802985482514}
   unitHealth: 0
+  blueSpellPrefab: {fileID: -2125788747724651186, guid: a4b98322d708e4b4684a3dfe1badf0ea, type: 3}
+  redSpellPrefab: {fileID: 865392764968657467, guid: 40ba57502a16a3e44bc016c34ac6166b, type: 3}
 --- !u!114 &1047350763717494152
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bedbb2c9247c946840d9e50cbc2b66, type: 3}
   m_Name: MageSO
   m_EditorClassIdentifier: 
-  Damage: 100
+  Damage: 20
   Heal: 0
   Speed: 3
   AttackSpeed: 1.2

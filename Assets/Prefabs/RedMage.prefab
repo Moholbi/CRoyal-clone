@@ -496,6 +496,8 @@ MonoBehaviour:
   fighterAnimator: {fileID: 2468545851533941322}
   _healthBar: {fileID: 5804382516336292547}
   unitHealth: 0
+  blueSpellPrefab: {fileID: -2125788747724651186, guid: a4b98322d708e4b4684a3dfe1badf0ea, type: 3}
+  redSpellPrefab: {fileID: 865392764968657467, guid: 40ba57502a16a3e44bc016c34ac6166b, type: 3}
 --- !u!114 &3052051180164827751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,7 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneGuid: 
   _serializerGuid: bdb8d1d2-1026-4154-9b41-753da9f96653
-  _prefabId: 7
+  _prefabId: 11
   _updateRate: 1
   _autoFreezeProxyFrames: 0
   _clientPredicted: 1

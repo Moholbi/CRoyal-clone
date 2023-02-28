@@ -8,7 +8,6 @@ public class FighterUnit : Damagable
 {
     protected List<Damagable> TargetList;
     protected Damagable nearestEnemy;
-    protected ObjectPooler objectPooler;
     public bool isBlue;
     protected bool isAttacking;
 
@@ -38,7 +37,6 @@ public class FighterUnit : Damagable
         unitHealth = statList.MaxHealth;
 
         _healthBar.UpdateHealthBar(_maxHealth, unitHealth);
-        objectPooler = ObjectPooler.Instance;
     }
 
     void TypeDecider()
@@ -164,6 +162,8 @@ public class FighterUnit : Damagable
         }
 
         TargetList.Remove(this);
-        BoltNetwork.Destroy(gameObject);
+        var evnt = DestroyUnitEvent.Create();
+        evnt.DestroyID = GetComponent<BoltEntity>().NetworkId;
+        evnt.Send();
     }
 }

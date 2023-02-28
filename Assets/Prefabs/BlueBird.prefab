@@ -502,6 +502,8 @@ MonoBehaviour:
   fighterAnimator: {fileID: 7235284654635766514}
   _healthBar: {fileID: 7270603681635766969}
   unitHealth: 0
+  blueDragonBreath: {fileID: 3737250971438048601, guid: 4ccc4c8bca57e0f4c9ed135347b6df7b, type: 3}
+  redDragonBreath: {fileID: 728031809349185408, guid: fbc6a157f31eac24c98007fe29c5a254, type: 3}
 --- !u!114 &-7947920711713677611
 MonoBehaviour:
   m_ObjectHideFlags: 0

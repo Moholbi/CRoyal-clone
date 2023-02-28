@@ -207,6 +207,8 @@ MonoBehaviour:
   fighterAnimator: {fileID: 7160817448345215763}
   _healthBar: {fileID: 8866430621789335352}
   unitHealth: 0
+  blueHeal: {fileID: 758474992094548696, guid: 58dcab558b04a324ab9bb6c34fb87523, type: 3}
+  redHeal: {fileID: 1012180581121734710, guid: 7878c03dc40989946973eed04af6dbd6, type: 3}
 --- !u!114 &74410633221521123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneGuid: 
   _serializerGuid: bdb8d1d2-1026-4154-9b41-753da9f96653
-  _prefabId: 8
+  _prefabId: 12
   _updateRate: 1
   _autoFreezeProxyFrames: 0
   _clientPredicted: 1

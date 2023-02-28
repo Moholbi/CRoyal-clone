@@ -2,24 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Bolt;
 
 public class HealerBehaviour : FighterUnit
 {
-    string[] spellTypes = { "BlueHeal", "RedHeal" };
-    private string _selectedSpell;
+    [SerializeField] GameObject blueHeal;
+    [SerializeField] GameObject redHeal;
 
     protected override void Attacked()
     {
         if (isBlue)
         {
-            _selectedSpell = "BlueHeal";
+            BoltNetwork.Instantiate(blueHeal, transform.position, Quaternion.identity);
         }
         else
         {
-            _selectedSpell = "RedHeal";
+           BoltNetwork.Instantiate(redHeal, transform.position, Quaternion.identity);
         }
-
-        objectPooler.SpawnFromPool(_selectedSpell, transform.position, Quaternion.identity);
     }
 
     protected override void FindNearest()

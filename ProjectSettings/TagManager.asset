@@ -11,6 +11,8 @@ TagManager:
   - Red
   - RedCamera
   - BlueCamera
+  - BlueGround
+  - RedGround
   layers:
   - Default
   - TransparentFX
@@ -22,8 +24,8 @@ TagManager:
   - Support
   - Melee
   - Aerial
-  - 
-  - 
+  - GroundBlue
+  - GroundRed
   - 
   - 
   - 

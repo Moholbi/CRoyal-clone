@@ -2,23 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Bolt;
 
 public class MageBehaviour : FighterUnit
 {
-    string[] spellTypes = { "BlueSpell", "RedSpell" };
-    private string _selectedSpell;
+    //[SerializeField] GameObject blueSpell;
+    //[SerializeField] GameObject redSpell;
+
+    [SerializeField] BoltEntity blueSpellPrefab;
+    [SerializeField] BoltEntity redSpellPrefab;
 
     protected override void Attacked()
     {
         if (isBlue)
         {
-            _selectedSpell = "BlueSpell";
-        }
-        else
-        {
-            _selectedSpell = "RedSpell";
+            //Instantiate(blueSpell, transform.position, Quaternion.identity);
+            var evnt = SpawnUnitEvent.Create();
+            evnt.PrefabID = blueSpellPrefab.PrefabId;
+            evnt.PrefabPosition = transform.position;
+            evnt.PrefabRotation = Quaternion.identity;
+            evnt.Send();
         }
 
-        objectPooler.SpawnFromPool(_selectedSpell, transform.position, Quaternion.identity);
+        else
+        {
+            //Instantiate(redSpell, transform.position, Quaternion.identity);
+            var evnt = SpawnUnitEvent.Create();
+            evnt.PrefabID = redSpellPrefab.PrefabId;
+            evnt.PrefabPosition = transform.position;
+            evnt.PrefabRotation = Quaternion.identity;
+            evnt.Send();
+        }
     }
 }

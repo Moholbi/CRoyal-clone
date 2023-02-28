@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Bolt;
 
 public class SpellBehaviour : Damagable
 {
     List<Damagable> TargetList;
     Damagable nearestEnemy;
-    ObjectPooler objectPooler;
     float projectileSpeed = 10f;
     int spellDamage;
     [SerializeField] TestSO statList;
@@ -82,8 +82,10 @@ public class SpellBehaviour : Damagable
 
         if (distanceFromEnemy < 1)
         {
-            gameObject.SetActive(false);
             Attacked();
+            var evnt = DestroyUnitEvent.Create();
+            evnt.DestroyID = GetComponent<BoltEntity>().NetworkId;
+            evnt.Send();
         }
     }
 

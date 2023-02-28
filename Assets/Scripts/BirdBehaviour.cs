@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Photon.Bolt;
 
 public class BirdBehaviour : FighterUnit
 {
-    string[] spellTypes = { "BlueDragonBreath", "RedDragonBreath" };
-    private string _selectedSpell;
+    [SerializeField] GameObject blueDragonBreath;
+    [SerializeField] GameObject redDragonBreath;
 
     protected override void Attacked()
     {
         if (isBlue)
         {
-            _selectedSpell = "BlueDragonBreath";
+            BoltNetwork.Instantiate(blueDragonBreath, transform.position, Quaternion.identity);
         }
         else
         {
-            _selectedSpell = "RedDragonBreath";
+           BoltNetwork.Instantiate(redDragonBreath, transform.position, Quaternion.identity);
         }
-
-        objectPooler.SpawnFromPool(_selectedSpell, transform.position, Quaternion.identity);
     }
 }

@@ -5,32 +5,21 @@ using Photon.Bolt;
 
 public class UseSkill : MonoBehaviour
 {
-
     public static List<Transform> BlueUnitList;
     public static List<Transform> RedUnitList;
-
-    ObjectPooler objectPooler;
-    //string[] blueUnitTypes = { "BlueKnight", "BlueMage", "BlueBird", "BluePriest" };
-    //string[] redUnitTypes = { "RedKnight", "RedMage", "RedBird", "RedPriest" };
-    //private string _selectedUnit;
 
     [SerializeField] DragDrop pointerLocation;
     [SerializeField] ManaBar manaBar;
 
-    [SerializeField] GameObject blueKnightPrefab;
-    [SerializeField] GameObject blueMagePrefab;
-    [SerializeField] GameObject blueBirdPrefab;
-    [SerializeField] GameObject bluePriestPrefab;
+    [SerializeField] BoltEntity blueKnightPrefab;
+    [SerializeField] BoltEntity blueMagePrefab;
+    [SerializeField] BoltEntity blueBirdPrefab;
+    [SerializeField] BoltEntity bluePriestPrefab;
 
-    [SerializeField] GameObject redKnightPrefab;
-    [SerializeField] GameObject redMagePrefab;
-    [SerializeField] GameObject redBirdPrefab;
-    [SerializeField] GameObject redPriestPrefab;
-
-    void Start()
-    {
-        objectPooler = ObjectPooler.Instance;
-    }
+    [SerializeField] BoltEntity redKnightPrefab;
+    [SerializeField] BoltEntity redMagePrefab;
+    [SerializeField] BoltEntity redBirdPrefab;
+    [SerializeField] BoltEntity redPriestPrefab;
 
     public void SpawnUnit()
     {
@@ -38,12 +27,12 @@ public class UseSkill : MonoBehaviour
         {
             if (StartMenu.cameraChoice == 2)
             {
-                SpawnBlueKnight();
+                SpawnBlueKnight(pointerLocation.pointerLocation, Quaternion.identity, blueBirdPrefab);
             }
 
             if (StartMenu.cameraChoice == 3)
             {
-                SpawnRedKnight();
+                SpawnRedKnight(pointerLocation.pointerLocation, Quaternion.identity, blueBirdPrefab);
             }
         }
 
@@ -51,12 +40,12 @@ public class UseSkill : MonoBehaviour
         {
             if (StartMenu.cameraChoice == 2)
             {
-                SpawnBlueMage();
+                SpawnBlueMage(pointerLocation.pointerLocation, Quaternion.identity, blueBirdPrefab);
             }
 
             if (StartMenu.cameraChoice == 3)
             {
-                SpawnRedMage();
+                SpawnRedMage(pointerLocation.pointerLocation, Quaternion.identity, blueBirdPrefab);
             }
         }
 
@@ -64,12 +53,12 @@ public class UseSkill : MonoBehaviour
         {
             if (StartMenu.cameraChoice == 2)
             {
-                SpawnBlueBird();
+                SpawnBlueBird(pointerLocation.pointerLocation, Quaternion.identity, blueBirdPrefab);
             }
 
             if (StartMenu.cameraChoice == 3)
             {
-                SpawnRedBird();
+                SpawnRedBird(pointerLocation.pointerLocation, Quaternion.identity, blueBirdPrefab);
             }
         }
 
@@ -77,86 +66,93 @@ public class UseSkill : MonoBehaviour
         {
             if (StartMenu.cameraChoice == 2)
             {
-                SpawnBluePriest();
+                SpawnBluePriest(pointerLocation.pointerLocation, Quaternion.identity, blueBirdPrefab);
             }
 
             if (StartMenu.cameraChoice == 3)
             {
-                SpawnRedPriest();
+                SpawnRedPriest(pointerLocation.pointerLocation, Quaternion.identity, blueBirdPrefab);
             }
         }
-
     }
 
-    void SpawnBlueKnight()
+    public void SpawnBlueKnight(Vector3 position, Quaternion rotation, BoltEntity boltEntity)
     {
-        //_selectedUnit = "BlueKnight";
-        //Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
-        var spawnedRedUnit = BoltNetwork.Instantiate(blueKnightPrefab, (pointerLocation.pointerLocation), Quaternion.identity);
-        //AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);        
+        var evnt = SpawnUnitEvent.Create();
+        evnt.PrefabID = blueKnightPrefab.PrefabId;
+        evnt.PrefabPosition = pointerLocation.pointerLocation;
+        evnt.PrefabRotation = Quaternion.identity;
+        evnt.Send();
         manaBar.SpendMana(1);
     }
 
-    void SpawnBlueMage()
+    public void SpawnBlueMage(Vector3 position, Quaternion rotation, BoltEntity boltEntity)
     {
-        //_selectedUnit = "BlueMage";
-        //Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
-        var spawnedRedUnit = BoltNetwork.Instantiate(blueMagePrefab, (pointerLocation.pointerLocation), Quaternion.identity);
-        //AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
-        manaBar.SpendMana(2);
-    }
-
-    void SpawnBlueBird()
-    {
-        //_selectedUnit = "BlueBird";
-        //Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
-        var spawnedRedUnit = BoltNetwork.Instantiate(blueBirdPrefab, (pointerLocation.pointerLocation), Quaternion.identity);
-        //AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
-        manaBar.SpendMana(3);
-    }
-
-    void SpawnBluePriest()
-    {
-        //_selectedUnit = "BluePriest";
-        //Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
-        var spawnedRedUnit = BoltNetwork.Instantiate(bluePriestPrefab, (pointerLocation.pointerLocation), Quaternion.identity);
-        //AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
-        manaBar.SpendMana(3);
-    }
-
-    void SpawnRedKnight()
-    {
-        //_selectedUnit = "BlueKnight";
-        //Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
-        var spawnedRedUnit = BoltNetwork.Instantiate(redKnightPrefab, (pointerLocation.pointerLocation), Quaternion.identity);
-        //AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);        
+        var evnt = SpawnUnitEvent.Create();
+        evnt.PrefabID = blueMagePrefab.PrefabId;
+        evnt.PrefabPosition = pointerLocation.pointerLocation;
+        evnt.PrefabRotation = Quaternion.identity;
+        evnt.Send();
         manaBar.SpendMana(1);
     }
 
-    void SpawnRedMage()
+        public void SpawnBlueBird(Vector3 position, Quaternion rotation, BoltEntity boltEntity)
     {
-        //_selectedUnit = "BlueMage";
-        //Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
-        var spawnedRedUnit = BoltNetwork.Instantiate(redMagePrefab, (pointerLocation.pointerLocation), Quaternion.identity);
-        //AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
-        manaBar.SpendMana(2);
+        var evnt = SpawnUnitEvent.Create();
+        evnt.PrefabID = blueBirdPrefab.PrefabId;
+        evnt.PrefabPosition = pointerLocation.pointerLocation;
+        evnt.PrefabRotation = Quaternion.identity;
+        evnt.Send();
+        manaBar.SpendMana(1);
     }
 
-    void SpawnRedBird()
+        public void SpawnBluePriest(Vector3 position, Quaternion rotation, BoltEntity boltEntity)
     {
-        //_selectedUnit = "BlueBird";
-        //Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
-        var spawnedRedUnit = BoltNetwork.Instantiate(redBirdPrefab, (pointerLocation.pointerLocation), Quaternion.identity);
-        //AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
-        manaBar.SpendMana(3);
+        var evnt = SpawnUnitEvent.Create();
+        evnt.PrefabID = bluePriestPrefab.PrefabId;
+        evnt.PrefabPosition = pointerLocation.pointerLocation;
+        evnt.PrefabRotation = Quaternion.identity;
+        evnt.Send();
+        manaBar.SpendMana(1);
     }
 
-    void SpawnRedPriest()
+        public void SpawnRedKnight(Vector3 position, Quaternion rotation, BoltEntity boltEntity)
     {
-        //_selectedUnit = "BluePriest";
-        //Damagable spawnedBlueUnit = objectPooler.SpawnFromPool(_selectedUnit, (pointerLocation.pointerLocation), Quaternion.identity).GetComponent<Damagable>();
-        var spawnedRedUnit = BoltNetwork.Instantiate(redPriestPrefab, (pointerLocation.pointerLocation), Quaternion.identity);
-        //AliveUnitHolder.BlueUnitList.Add(spawnedBlueUnit);
-        manaBar.SpendMana(3);
+        var evnt = SpawnUnitEvent.Create();
+        evnt.PrefabID = redKnightPrefab.PrefabId;
+        evnt.PrefabPosition = pointerLocation.pointerLocation;
+        evnt.PrefabRotation = Quaternion.identity;
+        evnt.Send();
+        manaBar.SpendMana(1);
+    }
+
+        public void SpawnRedMage(Vector3 position, Quaternion rotation, BoltEntity boltEntity)
+    {
+        var evnt = SpawnUnitEvent.Create();
+        evnt.PrefabID = redMagePrefab.PrefabId;
+        evnt.PrefabPosition = pointerLocation.pointerLocation;
+        evnt.PrefabRotation = Quaternion.identity;
+        evnt.Send();
+        manaBar.SpendMana(1);
+    }
+
+        public void SpawnRedBird(Vector3 position, Quaternion rotation, BoltEntity boltEntity)
+    {
+        var evnt = SpawnUnitEvent.Create();
+        evnt.PrefabID = redBirdPrefab.PrefabId;
+        evnt.PrefabPosition = pointerLocation.pointerLocation;
+        evnt.PrefabRotation = Quaternion.identity;
+        evnt.Send();
+        manaBar.SpendMana(1);
+    }
+
+        public void SpawnRedPriest(Vector3 position, Quaternion rotation, BoltEntity boltEntity)
+    {
+        var evnt = SpawnUnitEvent.Create();
+        evnt.PrefabID = redPriestPrefab.PrefabId;
+        evnt.PrefabPosition = pointerLocation.pointerLocation;
+        evnt.PrefabRotation = Quaternion.identity;
+        evnt.Send();
+        manaBar.SpendMana(1);
     }
 }

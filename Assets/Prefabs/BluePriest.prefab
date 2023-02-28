@@ -1060,6 +1060,8 @@ MonoBehaviour:
   fighterAnimator: {fileID: 3470845426908991697}
   _healthBar: {fileID: 4733017452856027559}
   unitHealth: 0
+  blueHeal: {fileID: 758474992094548696, guid: 58dcab558b04a324ab9bb6c34fb87523, type: 3}
+  redHeal: {fileID: 1012180581121734710, guid: 7878c03dc40989946973eed04af6dbd6, type: 3}
 --- !u!114 &4099292630403525802
 MonoBehaviour:
   m_ObjectHideFlags: 0

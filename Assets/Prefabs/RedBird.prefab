@@ -1121,6 +1121,8 @@ MonoBehaviour:
   fighterAnimator: {fileID: 1283729250380240402}
   _healthBar: {fileID: 4241330825257867971}
   unitHealth: 0
+  blueDragonBreath: {fileID: 3737250971438048601, guid: 4ccc4c8bca57e0f4c9ed135347b6df7b, type: 3}
+  redDragonBreath: {fileID: 728031809349185408, guid: fbc6a157f31eac24c98007fe29c5a254, type: 3}
 --- !u!114 &3289853714250058878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,7 +1137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneGuid: 
   _serializerGuid: bdb8d1d2-1026-4154-9b41-753da9f96653
-  _prefabId: 5
+  _prefabId: 9
   _updateRate: 1
   _autoFreezeProxyFrames: 0
   _clientPredicted: 1
